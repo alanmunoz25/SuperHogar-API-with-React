@@ -72,8 +72,8 @@ class  App  extends  Component {
   render() {
     return (
       <div  className="App">
-        <header  className="App-header">
-          <Header></Header>
+        <header  >
+          <img src="http://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo.png" alt="Logo" />
         </header>
         <div>
             {this.scaledSections.map((level, i) =>
