@@ -1,0 +1,19 @@
+{
+  "name": "superhogar-api-with-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alanmunoz25/SuperHogar-API-with-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alanmunoz25/SuperHogar-API-with-React/issues"
+  },
+  "homepage": "https://github.com/alanmunoz25/SuperHogar-API-with-React#readme"
+}

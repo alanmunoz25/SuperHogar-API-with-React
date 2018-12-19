@@ -73,7 +73,7 @@ class  App  extends  Component {
     return (
       <div  className="App">
         <header  >
-          <img src="http://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo.png" alt="Logo" />
+          <Header></Header>
         </header>
         <div>
             {this.scaledSections.map((level, i) =>
