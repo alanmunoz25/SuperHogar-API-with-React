@@ -1,13 +1,13 @@
 import  React, { Component } from  'react';
 import  Header  from  './components/Header';
 import  Properties from './components/Properties';
-import  SearchBox  from './components/SearchBox';
+import  SearchPhoto  from './components/SearchPhoto';
 
 class App extends Component {
   render() {
     return(
       <div>
-      <SearchBox></SearchBox>
+      <SearchPhoto></SearchPhoto>
       <header>
         <Header></Header>
       </header>
