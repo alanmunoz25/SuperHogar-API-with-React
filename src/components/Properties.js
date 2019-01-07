@@ -64,8 +64,8 @@ class  Properties  extends  Component {
       construccion: section.acf.construccion,
       sector: section.acf.sector,
       provincia: section.acf.provincia,
-      desea: section.acf.desea.value,
-      moneda: section.acf.moneda.value
+      desea: section.acf.desea,
+      moneda: section.acf.moneda
     }
   }
   openPopupbox(section) {
@@ -142,7 +142,7 @@ class  Properties  extends  Component {
                                   </ul>
 
                                   <div class="address ellipsis" data-label="property-address">
-                                      <a href="#">
+                                      <a href="/">
                                           <span class="listing-street-address">{section.sector}</span>,
                                           <span class="listing-city">{section.provincia}</span>,
                                       </a>

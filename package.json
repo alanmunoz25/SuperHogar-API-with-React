@@ -11,6 +11,8 @@
     "react-image-lightbox": "^5.1.0",
     "react-number-format": "^4.0.5",
     "react-popupbox": "^2.0.8",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {

@@ -18,7 +18,7 @@ class Header extends Component {
               <Button type="submit">Buscar</Button>
             </Navbar.Form>
             <NavDropdown eventKey={1} title="Busco" id="basic-nav-dropdown">
-              <MenuItem eventKey={1.1}>Comprar</MenuItem>
+               <MenuItem eventKey={1.1} onClick={event => alert('hola')}>Comprar</MenuItem>
               <MenuItem eventKey={1.2}>Alquilar</MenuItem>
             </NavDropdown>
             <NavDropdown eventKey={2} title="Tipo" id="basic-nav-dropdown">
