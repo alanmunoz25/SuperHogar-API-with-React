@@ -6,7 +6,7 @@ class Header extends Component {
     return (
       <Navbar>
         <Navbar.Header>
-            <img src="http://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo.png" alt="Logo" />
+            <img src="http://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo1.png" alt="Logo" />
         </Navbar.Header>
         <Navbar.Toggle />
         <Navbar.Collapse>
@@ -19,7 +19,7 @@ class Header extends Component {
             </Navbar.Form>
             <NavDropdown eventKey={1} title="Busco" id="basic-nav-dropdown">
                <MenuItem eventKey={1.1} onClick={event => alert('hola')}>Comprar</MenuItem>
-              <MenuItem eventKey={1.2}>Alquilar</MenuItem>
+              <MenuItem eventKey={1.2} onClick={this.handleShowAlquileres}>Alquilar</MenuItem>
             </NavDropdown>
             <NavDropdown eventKey={2} title="Tipo" id="basic-nav-dropdown">
               <MenuItem eventKey={2.1}>Apartamento</MenuItem>
