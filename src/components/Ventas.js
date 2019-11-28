@@ -17,7 +17,7 @@ class  Ventas  extends  Component {
           isOpen:  false,
           sections: [],
           current:  null,
-          dataRoute:  "http://www.superhogar.net/wp-json/properties/v1/venta"
+          dataRoute:  "https://www.superhogar.net/wp-json/properties/v1/venta"
       }
   }
   get  scaledSections() {
@@ -97,12 +97,6 @@ class  Ventas  extends  Component {
                       <li class="component_property-card js-component_property-card js-quick-view" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
 
                           <div class="pre-card-wrap">
-                              <div class="broker-info">
-                                  <div class="ellipsis">
-                                      <span>Cortesía de </span>
-                                      <span data-label="property-broker">RE/MAX</span>
-                                  </div>
-                              </div>
 
                               <div class="label-wrap">
                                   <span class="label c_label label-green" data-label="property-label-new">
@@ -112,11 +106,11 @@ class  Ventas  extends  Component {
                           </div>
 
                           <div class="card-box js-navigate-to js-record-user-activity" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
-
+                              
                               <div class="photo-wrap " data-label="property-photo">
                                       <img
                                         alt="{section.tipo} {section.sector} {section.provincia}"
-                                        src={section.src}
+                                        src={section.src.split(',')[0]}
                                         onClick={() => this.openPopupbox(this.state.sections[i*3+j])} />
                                         <div class="photo-wrap-detail-overlay"></div>
                               </div>
