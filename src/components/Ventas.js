@@ -10,14 +10,14 @@ import  '../css/App.css';
 import  '../css/roboto-fonts.css';
 import  '../css/custom.css';
 
-class  Properties  extends  Component {
-  constructor(props){
-      super(props);
+class  Ventas  extends  Component {
+  constructor(){
+      super();
       this.state  = {
           isOpen:  false,
           sections: [],
           current:  null,
-          dataRoute:  "https://www.superhogar.net/wp-json/properties/v1/post"
+          dataRoute:  "https://www.superhogar.net/wp-json/properties/v1/venta"
       }
   }
   get  scaledSections() {
@@ -43,8 +43,8 @@ class  Properties  extends  Component {
     return  sections;
   }
   componentDidMount() {
-    fetch(this.props.dataRoute)
-       .then(res => res.json())
+    fetch(this.state.dataRoute)
+       .then(response => response.json())
        .then(sections => this.setState((prevState, props) => {
          return { sections: sections.map(this.mapSection)};
        }));
@@ -83,7 +83,9 @@ class  Properties  extends  Component {
       <div  className="App">
         <div>
         <div id="srp-list" className="srp-list">
-
+            <div>
+                <h2>Ventas</h2>
+            </div>
             {this.scaledSections.map((level, i) =>
               <div className="columns" key={i}>
                 {level.map((section, j) =>
@@ -92,9 +94,10 @@ class  Properties  extends  Component {
 
 
 <ul className="srp-list-marginless list-unstyled prop-list">
-                      <li className="component_property-card js-component_property-card js-quick-view" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
+                      <li class="component_property-card js-component_property-card js-quick-view" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
 
                           <div class="pre-card-wrap">
+
                               <div class="label-wrap">
                                   <span class="label c_label label-green" data-label="property-label-new">
                                     {section.tipo}
@@ -102,42 +105,42 @@ class  Properties  extends  Component {
                               </div>
                           </div>
 
-                          <div className="card-box js-navigate-to js-record-user-activity" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
-
-                              <div className="photo-wrap " data-label="property-photo">
+                          <div class="card-box js-navigate-to js-record-user-activity" data-url="http://www.superhogar.net/casa-cuesta-hermosa-ii-2/">
+                              
+                              <div class="photo-wrap " data-label="property-photo">
                                       <img
                                         alt="{section.tipo} {section.sector} {section.provincia}"
                                         src={section.src.split(',')[0]}
                                         onClick={() => this.openPopupbox(this.state.sections[i*3+j])} />
-                                        <div className="photo-wrap-detail-overlay"></div>
+                                        <div class="photo-wrap-detail-overlay"></div>
                               </div>
 
-                              <div className="detail-wrap ">
-                                  <div className="photo-overlay">
-                                      <div className="property-type">{section.desea}</div>
-                                      <div className="price" data-label="property-price">
-                                          <span className="data-price">
+                              <div class="detail-wrap ">
+                                  <div class="photo-overlay">
+                                      <div class="property-type">{section.desea}</div>
+                                      <div class="price" data-label="property-price">
+                                          <span class="data-price">
                                             {section.moneda}<NumberFormat value={section.precio} displayType={'text'} thousandSeparator={true} />
                                           </span>
 
                                       </div>
                                   </div>
 
-                                  <div className="photo-overlay-right">
+                                  <div class="photo-overlay-right">
                                   </div>
 
-                                  <ul className="prop-meta ellipsis">
-                                      <li data-label="property-meta-beds"><span className="data-value meta-beds">{section.hab}</span> Hab</li>
-                                      <li data-label="property-meta-baths"><span className="data-value">{section.ban}</span> Ban</li>
-                                      <li data-label="property-meta-sqft"><span className="data-value">{section.construccion}</span> mts</li>
-                                      <li data-label="property-meta-lotsize"><span className="data-value"></span><span className="lot-label"> lot</span></li>
-                                      <li data-label="property-meta-garage"><span className="data-value">{section.par}</span> Par</li>
+                                  <ul class="prop-meta ellipsis">
+                                      <li data-label="property-meta-beds"><span class="data-value meta-beds">{section.hab}</span> Hab</li>
+                                      <li data-label="property-meta-baths"><span class="data-value">{section.ban}</span> Ban</li>
+                                      <li data-label="property-meta-sqft"><span class="data-value">{section.construccion}</span> mts</li>
+                                      <li data-label="property-meta-lotsize"><span class="data-value"></span><span class="lot-label"> lot</span></li>
+                                      <li data-label="property-meta-garage"><span class="data-value">{section.par}</span> Par</li>
                                   </ul>
 
-                                  <div className="address ellipsis" data-label="property-address">
+                                  <div class="address ellipsis" data-label="property-address">
                                       <a href="/">
-                                          <span className="listing-street-address">{section.sector}</span>,
-                                          <span className="listing-city">{section.provincia}</span>,
+                                          <span class="listing-street-address">{section.sector}</span>,
+                                          <span class="listing-city">{section.provincia}</span>,
                                       </a>
                                   </div>
 
@@ -158,4 +161,4 @@ class  Properties  extends  Component {
   }
 }
 
-export default Properties;
+export default Ventas;

@@ -17,7 +17,7 @@ class Header extends Component {
     return (
       <Navbar>
         <Navbar.Header>
-            <img src="http://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo1.png" alt="Logo" />
+            <img src="https://www.superhogar.net/wp-content/themes/starter-theme-master/images/logo-superhogar-website.png" alt="Logo" />
         </Navbar.Header>
         <Navbar.Toggle />
         <Navbar.Collapse>
